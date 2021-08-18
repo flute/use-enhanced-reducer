@@ -2,6 +2,26 @@
 
 Powerful enhanced usereducer hook, support redux-thunk, redux-promise, middlewares.
 
+# Desc
+
+On the basis of react useReducer, add redux-thunk and redux-promise functions.
+
+All functions are as follows:
+
+1. Support function/promise type actions
+2. Support Promise type action.payload
+3. Support getState method to get real-time state
+4. Support middlewares
+
+增强型usereducer hook, 在usereducer的基础上，实现redux-thunk,redux-promise的功能，支持自定义中间件。
+
+功能明细如下：
+
+1. 支持函数类型的action，包含普通function类型和异步promise类型
+2. 支持异步的payload，即payload可以是promise函数
+3. 增加getState方法，可以实时获取最新state
+4. 支持自定义中间件
+
 # Examples
 
 ### Support any type of action
@@ -47,7 +67,6 @@ import useEnhancedReducer from 'use-enhanced-reducer';
 
 const Example: React.FunctionComponent<{}> = () => {
 	const [state, dispatch, getState] = useEnhancedReducer(reducer, initialState)
-
 	// do something
 }
 ```
